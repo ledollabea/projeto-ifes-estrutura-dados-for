@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Busca Sequencial</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: 20em;
+        margin: 10em auto;
+      }
+    </style>
+    <script>
+      function buscarSequencial(event) {
+        event.preventDefault();
+        var tamanho = Number(document.getElementById("vetorInput").value);
+        var vetor = [];
+        vetor.length = tamanho;
+        let numBuscado = Number(document.getElementById("numeroInput").value);
+        vetor[0] = 0;
+        for (let i = 0; i < tamanho; i++) {
+          vetor[i] = i + 1;
+        }
+
+        for (let i = 1; i <= vetor.length; i++) {
+          if (vetor[i] === numBuscado) {
+            alert(
+              "o numero procurado: " +
+                numBuscado +
+                ` foi encontrado na posição ` +
+                i
+            );
+            break;
+          } else if (i === vetor.length && i !== numBuscado) {
+            alert("O numero buscado " + numBuscado + " não foi encontrado.");
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Busca sequencial</h1>
+    <form onsubmit="buscarSequencial(event)">
+      <input
+        type="text"
+        placeholder="Digite o numero de posições do vetor"
+        id="vetorInput"
+      />
+      <input
+        type="text"
+        placeholder="Digite o numero que quer procurar"
+        id="numeroInput"
+      />
+      <button type="submit">Executar função</button>
+    </form>
+  </body>
+</html>

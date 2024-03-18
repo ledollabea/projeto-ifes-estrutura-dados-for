@@ -16,9 +16,9 @@ O formulário possui as seguintes funcionalidades:
 ## Como Funciona
 
 1. Abra o arquivo `index.html` em seu navegador.
-2. Preencha os campos de nome, e-mail e idade no formulário.
-3. Clique no botão "Enviar" para submeter o formulário.
-4. O script JavaScript verificará se os campos estão preenchidos corretamente e exibirá uma mensagem de sucesso ou erro.
+2. Preencha os campos de entrada para numero máximo do vetor e o numero a ser buscado no formulário.
+3. Clique no botão "Executar função" para submeter o formulário.
+4. O script JavaScript alertará se o o numero buscado foi encontrado ou não e em qual posição.
 
 ## Estrutura do Projeto
 
